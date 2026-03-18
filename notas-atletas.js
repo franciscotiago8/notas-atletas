@@ -18,3 +18,22 @@ let atletas = [
 ];
 
 //Retornar uma lista 
+function resultado (competidores){
+    competidores.forEach(atleta => {
+        function nome(){
+            return  `Atleta:${atleta.nome}`
+        }
+        console.log(nome())
+        function obterNotas(){
+          let notasOrganizadas = atleta.notas.sort((a, b) => b-a)
+            return `Notas obtidas: ${notasOrganizadas}`
+                  }
+        console.log(obterNotas())
+        function media(){
+          let calcularMedia = obterNotas()
+          return calcularMedia
+        }
+        console.log(media())
+    });
+}
+resultado(atletas)
