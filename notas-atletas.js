@@ -18,16 +18,3 @@ let atletas = [
 ];
 
 //Retornar uma lista 
-function resultado (competidores){
-    competidores.forEach(atleta => {
-        function nome(){
-            return console.log(atleta.nome)
-        }
-        nome()
-        function notas(){
-            return console.log(atleta.notas)
-        }
-        notas()
-    });
-}
-resultado(atletas)
