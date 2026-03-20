@@ -18,16 +18,27 @@ let atletas = [
 ];
 
 //Retornar uma lista 
-class AparecerAtletas {
-  constructor(atletas){
-    this.atletas = atletas
-  }
-  resultado(){
-    this.atletas.forEach(atleta => {
-      return console.log (atleta.nome)
-  });
+function resultado (competidores){
+    competidores.forEach(atleta => {
+        function nome(){
+            return  atleta.nome
+        }
+        console.log(`Atleta: ${nome()}`)
+        function obterNotas(){
+          let notasOrganizadas = atleta.notas.sort((a, b) => b-a)
+            return notasOrganizadas
+                  }
+        console.log(`Notas Obtidas: ${obterNotas()}`)
+        function media(){
+          let somar = 0
+          let notasParaMedia = obterNotas().slice(1,4)
+          let numerarNotas = notasParaMedia.length
+           notasParaMedia.forEach(nota  => {
+             somar = somar + nota
+          });
+          return somar/numerarNotas
+        }
+        console.log(`Media Válida: ${media()}`)
+    });
 }
-}
-
-let mostrarAtletas = new AparecerAtletas(atletas)
-mostrarAtletas.resultado()
+resultado(atletas)
